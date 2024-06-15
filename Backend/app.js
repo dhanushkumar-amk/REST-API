@@ -11,6 +11,8 @@ dotenv.config({path: path.join(__dirname, 'config', 'config.env')});
 const connectDatabase = require('./config/Connectdatabase')
 connectDatabase();
 
+// middleware to convert the data to json from the server
+app.use(express.json())
 
 // importing the routes
 const products = require('./Routes/products')
